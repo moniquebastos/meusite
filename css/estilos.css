@@ -118,6 +118,8 @@ header {
 
       color: indianred;
       border-radius: 0px 0px 10px 10px;
+      z-index: -10;
+      box-shadow: 3px 2px 10px rgb(148, 144, 144)
   }
 
   @media (min-width: 400px) {
