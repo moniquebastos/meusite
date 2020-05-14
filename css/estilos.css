@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  height: 93vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +115,7 @@ header {
   font-size: 1em;
 
 }
-
+ /*Sessões - portifólio, redes sociais*/
 .portfolio {
   padding: 2em;
   height: 100vh;
@@ -162,7 +162,7 @@ justify-content: center;
     height: 200px;
     width: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px 0px 0px 15px;
   }
 
   .img-portfolio:hover {
@@ -177,6 +177,118 @@ justify-content: center;
     }
   
   }
+
+
+  .img-portfolio2 {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+  }
+
+  .img-portfolio2:hover {
+    opacity: 0.5;
+  }
+
+
+  @media (min-width: 1200px) {
+    .img-portfolio2 {
+      height: 11em; /* auto */
+      width: 11em; /* 100% */
+    } 
+  } 
+
+  .img-portfolio3 {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 0px 15px 15px 0px;
+  }
+
+  .img-portfolio3:hover {
+    opacity: 0.5;
+  }
+
+
+  @media (min-width: 1200px) {
+    .img-portfolio3 {
+      height: 11em; /* auto */
+      width: 11em; /* 100% */
+    }
+  } 
+
+
+
+  .redessociais figure {
+    text-align: center;
+  }
+
+  .redessociais {
+    padding: 2em;
+    height: 50vh;
+    background-color: indianred;
+  }
+  
+  @media (min-width: 300px) {
+    .redessociais {
+    height: 150vh;
+    }
+  }
+
+  @media (min-width: 475px) {
+    .redessociais {
+    height: 70vh;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .redessociais {
+    height: 90vh;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .redessociais {
+    height: 50vh;
+    }
+  }
+
+  .redessociais h2 {
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    color: white;
+
+  }
+  
+  .redessociais .grid {
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  }
+  
+  @media (min-width: 475px) {
+    .redessociais .grid {
+    grid-template-columns: 200px 200px;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .redessociais .grid {
+    grid-template-columns: 200px 200px 200px;
+    align-content: center;
+    height: calc(100vh - 4em - 59px - 2em);
+    }
+  }
+  
+@media (min-width: 1000px) {
+  .redessociais .grid {
+  grid-template-columns: repeat(4, 200px);
+  height: calc(50vh - 4em - 59px - 2em);
+  }
+}
 
   /*Box da sidebar*/
   .sidebar {
@@ -196,7 +308,6 @@ justify-content: center;
       z-index: -10;
       box-shadow: 3px 2px 10px rgb(148, 144, 144);
       font-family: 'Open Sans', sans-serif;
-      
   }
 
   @media (min-width: 400px) {
@@ -204,7 +315,6 @@ justify-content: center;
         height: 180px;
         width: 280px;
         margin-left: 100px;
-  
     }
   }
 
