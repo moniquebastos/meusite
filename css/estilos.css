@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  height: 93vh;
+  height: 96vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +42,7 @@ header {
     top: 0;
     box-shadow: 5px 2px 3px rgb(148, 144, 144);
     font-family: 'Open Sans', sans-serif;
+    z-index: 1;
   }
   
 
@@ -50,13 +51,15 @@ header {
     padding: 30px 20px;
   }
 
-  .menu a:hover { 
-    display: block;
-    padding: 30px 20px;
-    text-decoration: none;
+.menu:active,
+.menu a:hover { 
     background-color: white;
     border-radius: 0px 0px 30px 30px;
     color: indianred;
+    display: block;
+    padding: 30px 20px;
+    text-decoration: none;
+    transition: backgroun-color 3s, color, 1s;
     
   }
 
@@ -68,8 +71,9 @@ header {
   .menu li {
     list-style: none;
   }
-  
 
+
+  /*Links*/
   a {
     text-decoration: none; color: white; 
   }
@@ -80,6 +84,23 @@ header {
   
 
   /* títulos */
+.titulo {
+  opacity: 0;
+
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  
+  from {
+    opacity: 0;
+  }
+  
+  to {
+opacity: 1;
+  }
+}
+
   .site-title {
     color: black;
     text-align: center;
@@ -89,6 +110,7 @@ header {
   .site-title:hover {
     color: indianred;
     text-align: center;
+    transition: color 500ms;
 
   }
   
@@ -104,6 +126,7 @@ header {
     color: black;
     text-align: center;
     font-style: normal;
+    transition: color 500ms;
     
   }
 
@@ -115,16 +138,37 @@ header {
   font-size: 1em;
 
 }
- /*Sessões - portifólio, redes sociais*/
-.portfolio {
-  padding: 2em;
-  height: 100vh;
-}
+ /*Sessões - portifólio, redes sociais, contato*/
 
-.portfolio h2 {
+ .contato {
+  padding: 2em;
+  height: 40vh;
+  background-color: indianred;
+ }
+
+
+ .contato h2 {
   font-family: 'Indie Flower', cursive;
   margin-bottom: 0.5em;
   font-size: 2em;
+  color: white;
+  text-align: center;
+
+}
+
+.portfolio {
+  padding: 2em;
+ min-height: 50vh;
+  background-color: indianred;
+}
+
+.contato h2,
+.portfolio h2 {
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  font-size: 2em;
+  color: white;
 }
 
 .portfolio .grid {
@@ -167,6 +211,7 @@ justify-content: center;
 
   .img-portfolio:hover {
     opacity: 0.5;
+    transition: opacity 500ms;
   }
 
 
@@ -188,6 +233,7 @@ justify-content: center;
 
   .img-portfolio2:hover {
     opacity: 0.5;
+    transition: opacity 500ms;
   }
 
 
@@ -207,6 +253,7 @@ justify-content: center;
 
   .img-portfolio3:hover {
     opacity: 0.5;
+    transition: opacity 500ms;
   }
 
 
@@ -218,50 +265,52 @@ justify-content: center;
   } 
 
 
-
-  .redessociais figure {
+/*Sessão - Redes sociais*/
+  .desenhos figure {
     text-align: center;
   }
 
-  .redessociais {
-    padding: 2em;
-    height: 50vh;
-    background-color: indianred;
+  .desenhos {
+    padding: 5em;
+    height: 65vh;
+    background-color: white;
+    margin-bottom: 1.5em;
   }
   
   @media (min-width: 300px) {
-    .redessociais {
+    .desenhos {
     height: 150vh;
     }
   }
 
   @media (min-width: 475px) {
-    .redessociais {
+    .desenhos {
     height: 70vh;
     }
   }
 
   @media (min-width: 800px) {
-    .redessociais {
+    .desenhos {
     height: 90vh;
     }
   }
 
   @media (min-width: 1000px) {
-    .redessociais {
+    .desenhos {
     height: 50vh;
     }
   }
 
-  .redessociais h2 {
+  .desenhos h2 {
     font-family: 'Indie Flower', cursive;
     margin-bottom: 0.5em;
     font-size: 2em;
-    color: white;
+    color: indianred;
+    text-align: center;
 
   }
   
-  .redessociais .grid {
+  .desenhos .grid {
   display: grid;
   gap: 2em;
   justify-content: center;
@@ -270,13 +319,13 @@ justify-content: center;
   }
   
   @media (min-width: 475px) {
-    .redessociais .grid {
+    .desenhos .grid {
     grid-template-columns: 200px 200px;
     }
   }
   
   @media (min-width: 800px) {
-    .redessociais .grid {
+    .desenhos .grid {
     grid-template-columns: 200px 200px 200px;
     align-content: center;
     height: calc(100vh - 4em - 59px - 2em);
@@ -284,7 +333,7 @@ justify-content: center;
   }
   
 @media (min-width: 1000px) {
-  .redessociais .grid {
+  .desenhos .grid {
   grid-template-columns: repeat(4, 200px);
   height: calc(50vh - 4em - 59px - 2em);
   }
@@ -308,6 +357,7 @@ justify-content: center;
       z-index: -10;
       box-shadow: 3px 2px 10px rgb(148, 144, 144);
       font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
   }
 
   @media (min-width: 400px) {
@@ -319,7 +369,7 @@ justify-content: center;
   }
 
 
-/*i love avatars | Tumblr */ 
+/*Faixa de iloveavatars | Tumblr */ 
   .faixa {
     padding: 2px;
     background: rgb(177, 90, 90);
@@ -333,6 +383,22 @@ justify-content: center;
     margin-bottom: 2px;
   }
 
+/*Aula 4*/
+.contato .icons {
+text-align: center;
+}
+
+.contato a { 
+  color: white; 
+  font-size: 5em;
+}
+
+.contato a:active,
+.contato a:hover { 
+  text-decoration: none;
+  text-shadow: 2px 2px 10px white;
+  transition: text-shadow 1s;
+}
 
   /* Fontes usadas:
   font-family: 'Cutive Mono', monospace;
